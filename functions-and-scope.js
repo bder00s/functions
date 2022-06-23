@@ -4,6 +4,7 @@
 
 const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 
+
 /* Opdracht  1: Cum Laude */
 
 /* 1a: Script schrijven  */
@@ -15,7 +16,28 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // Log het antwoord in de terminal.
 
 // ---- Verwachte uitkomst: 6
-err
+
+//Checken welke waardes in de array hoger dan 8 zijn
+// Een forloop schrijven en daarna een if statement
+
+for (let i = 0; i < 10  ; i++) {
+    if ([i] >= 8 );
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /*  1b: Omschrijven tot een herbruikbare functie   */
 // Schrijf een functie genaamd cumLaude, die een array van cijfers verwacht (zoals grades) en het aantal Cum laude studenten teruggeeft. Gebruik hiervoor jouw antwoord van 1a.
