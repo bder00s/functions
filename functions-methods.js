@@ -8,13 +8,13 @@
 // getEmailDomain("n.eeken@novi-education.nl") geeft novi-education.nl
 // getEmailDomain("t.mellink@novi.nl") geeft novi.nl
 // getEmailDomain("a.wiersma@outlook.com") geeft outlook.com
-
-function getEmailDomain(emailAdres) {
-    const indexOfAap = emailAdres.indexOf("@");
-const domain = emailAdres.substring(indexOfAap + 1);
-return domain;
+{
+    function getEmailDomain(emailAdres) {
+        const indexOfAap = emailAdres.indexOf("@");
+        const domain = emailAdres.substring(indexOfAap + 1);
+        return domain;
+    }
 }
-
 console.log(getEmailDomain("n.eeken@novi-education.nl"));
 console.log(getEmailDomain("t.mellink@novi.nl"));
 console.log(getEmailDomain("a.wiersma@outlook.com"));
@@ -26,6 +26,35 @@ console.log(getEmailDomain("a.wiersma@outlook.com"));
 // typeOfEmail("t.mellink@novi.nl") geeft geeft "Medewerker"
 // typeOfEmail("novi.nlaapjesk@outlook.com") geeft geeft "Extern" <-- deze moet het ook doen!
 // typeOfEmail("a.wiersma@outlook.com") geeft "Extern"
+
+
+function typeOfEmail(emailAdress) {
+    const indexOfAap = emailAdress.indexOf("@");
+    const accountType = emailAdress.substring(indexOfAap + 1);
+
+return
+
+    switch (accountType) {
+        case (accountType === "novi-education.nl"):
+            console.log("Student");
+            break;
+
+        case (accountType === "novi.nl"):
+            console.log("Medewerker");
+            break;
+
+        case (accountType === "outlook.com"):
+            console.log("Extern");
+            break;
+
+        default:
+            console.log("Er is geen e-mailadres opgegeven");
+
+
+    }
+
+}
+
 
 //switch statement//
 
