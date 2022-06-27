@@ -32,31 +32,33 @@ function typeOfEmail(emailAdress) {
     const indexOfAap = emailAdress.indexOf("@");
     const accountType = emailAdress.substring(indexOfAap + 1);
 
-return
 
     switch (accountType) {
-        case (accountType === "novi-education.nl"):
-            console.log("Student");
+        case "novi-education.nl":
+            return "Student";
             break;
 
-        case (accountType === "novi.nl"):
-            console.log("Medewerker");
+        case "novi.nl":
+            return "Medewerker";
             break;
 
-        case (accountType === "outlook.com"):
-            console.log("Extern");
+        case "outlook.com":
+            return "Extern";
             break;
 
         default:
-            console.log("Er is geen e-mailadres opgegeven");
+            return ("Er is geen geldig e-mailadres opgegeven");
 
 
     }
 
 }
 
+console.log(typeOfEmail("t.mellink@novi.nl"));
+console.log(typeOfEmail("novi.nlaapjesk@outlook.com"));
+console.log(typeOfEmail("n.eeken@novi-education.nl"));
+console.log(typeOfEmail("bonne-deroos@hotmail.com"));
 
-//switch statement//
 
 /* Opdracht  3 */
 // Schrijf een functie genaamd checkEmailValidity, die een emailadres verwacht en checkt of het emailadres valide is. De functie returned true of false, afhankelijk van de uitkomst.
@@ -70,3 +72,5 @@ return
 // checkEmailValidity("n.eekenanovi.nl") geeft false - want geen @
 // checkEmailValidity("n.eeken@novinl.") geeft false - want de punt mag niet als laatst
 // checkEmailValidity("tessmellink@novi,nl") geeft false - want er staat een komma in
+
+
