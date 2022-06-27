@@ -96,9 +96,12 @@ function averageGrade(gradesArray) {
     return average / gradesArray.length;
 
 
-    console.log(averageGrade([8, 9, 4, 6, 10]));
+
 
 }
+
+console.log(averageGrade([8, 9, 4, 6, 10]));
+
 
 // ---- Verwachte uitkomsten:
 // averageGrade(grades) geeft 6.642857142857143
@@ -112,8 +115,6 @@ function averageGrade(gradesArray) {
 
 console.log(Math.round(averageGrade([8, 9, 4, 6, 10])*100)/100);
 
-
-
 /* Bonusopdracht: hoogste cijfer */
 
 /* 3a: Script schrijven  */
@@ -124,6 +125,11 @@ console.log(Math.round(averageGrade([8, 9, 4, 6, 10])*100)/100);
 // Log het antwoord in de terminal.
 
 // ---- Verwachte uitkomst: 9
+
+/* 3b: Omschrijven tot een herbruikbare functie */
+// Schrijf een functie genaamd highestGrade, die een array van cijfers verwacht (zoals grades) en het hoogste cijfer teruggeeft. Gebruik hiervoor jouw antwoord van 3a.
+// Zorg ervoor dat jouw functie ook werkt als we een andere array willen checken, zoals bijvoorbeeld: [6, 4, 5] of [8, 9, 4, 6, 10].
+// Log het antwoord in de terminal.
 
 //*Iedere waarde van de array langsgaan door een for loop met gradesArray.length. Dus eerst een for loop schrijven//
 
@@ -145,10 +151,7 @@ console.log(highestGrade([6, 4, 5]));
 console.log(highestGrade([8, 9, 4, 6, 10]));
 
 
-/* 3b: Omschrijven tot een herbruikbare functie */
-// Schrijf een functie genaamd highestGrade, die een array van cijfers verwacht (zoals grades) en het hoogste cijfer teruggeeft. Gebruik hiervoor jouw antwoord van 3a.
-// Zorg ervoor dat jouw functie ook werkt als we een andere array willen checken, zoals bijvoorbeeld: [6, 4, 5] of [8, 9, 4, 6, 10].
-// Log het antwoord in de terminal.
+
 
 // ---- Verwachte uitkomsten:
 // highestGrade(grades) geeft 9
