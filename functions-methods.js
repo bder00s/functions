@@ -73,4 +73,22 @@ console.log(typeOfEmail("bonne-deroos@hotmail.com"));
 // checkEmailValidity("n.eeken@novinl.") geeft false - want de punt mag niet als laatst
 // checkEmailValidity("tessmellink@novi,nl") geeft false - want er staat een komma in
 
+function checkEmailValidity(emailAdres) {
+    const indexOfAap = emailAdres.indexOf("@novi.nl");
+    if (emailAdres.endsWith("@novi.nl")) {
+        return true;
+    } else {
+        return false;
+    }
+
+}
+
+console.log(checkEmailValidity("tessmellink@novi.nl"));
+
+
+
+
+
+
+
 
