@@ -84,6 +84,7 @@ function checkEmailValidity(emailAdres) {
 }
 
 console.log(checkEmailValidity("tessmellink@novi.nl"));
+console.log(checkEmailValidity("n.eeken@novinl."));
 
 
 
