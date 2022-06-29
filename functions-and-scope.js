@@ -4,6 +4,7 @@
 
 const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 
+
 /* Opdracht  1: Cum Laude */
 
 /* 1a: Script schrijven  */
@@ -16,6 +17,17 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 
 // ---- Verwachte uitkomst: 6
 
+//Checken welke waardes in de array hoger dan 8 zijn
+// Een forloop schrijven en daarna een if statement
+
+let output = 0;
+for (let i = 0; i < grades.length; i++) {
+    if (grades[i] >= 8) {
+        output = output + 1;
+    }
+}
+console.log(output);
+
 
 /*  1b: Omschrijven tot een herbruikbare functie   */
 // Schrijf een functie genaamd cumLaude, die een array van cijfers verwacht (zoals grades) en het aantal Cum laude studenten teruggeeft. Gebruik hiervoor jouw antwoord van 1a.
@@ -27,7 +39,19 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // cumLaude([6, 4, 5]) geeft 0
 // cumLaude([8, 9, 4, 6, 10]) geeft 3
 
+function cumLaude(gradesArray) {
+    let output = 0;
+    for (let i = 0; i < grades.length; i++) {
+        if (grades[i] >= 8) {
+            output = output + 1;
 
+        }
+    }
+    return output;
+
+}
+
+console.log(cumLaude([8,9, 4, 6, 10]));
 
 
 /* Opdracht  2: Gemiddeld cijfer */
@@ -40,13 +64,44 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // * Hoe zorgt ik ervoor dat ik alle waardes uit de array kan langslopen, ook als de array wel 100 entries zou bevatten?
 // Log het antwoord in de terminal.
 
-// ---- Verwachte uitkomst: 6.642857142857143
+// ---Verwachte uitkomst: 6.642857142857143
 
+// * Gemiddelde berekenen: alle getallen bij elkaar optellen en vervolgens delen door hoeveel getallen het zijn
+// * verzamelen van de cijfers uit de array en dan door de array.length delen
+{
+let average=0;
+
+for (let i = 0; i < grades.length; i++) {
+    average = average + grades[i];
+}
+console.log(average/grades.length);
+
+const averageGrade = output + output / cumLaude([8,9, 4, 6, 10]); cumLaude.length;
+console.log(averageGrade);
+
+}
 
 /* 2b: Omschrijven tot een herbruikbare functie */
 // Schrijf een functie genaamd averageGrade, die een array van cijfers verwacht (zoals grades) en het gemiddelde cijfer teruggeeft. Gebruik hiervoor jouw antwoord van 2a.
 // Zorg ervoor dat jouw functie ook werkt als we een andere array willen checken, zoals bijvoorbeeld: [6, 4, 5] of [8, 9, 4, 6, 10].
 // Log het antwoord in de terminal.
+
+
+function averageGrade(gradesArray) {
+
+    let average = 0;
+    for (let i = 0; i < gradesArray.length; i++) {
+        average = average + gradesArray[i];
+    }
+    return average / gradesArray.length;
+
+
+
+
+}
+
+console.log(averageGrade([8, 9, 4, 6, 10]));
+
 
 // ---- Verwachte uitkomsten:
 // averageGrade(grades) geeft 6.642857142857143
@@ -58,8 +113,7 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // Zorg ervoor dat het gemiddelde cijfer dat wordt teruggegeven uit de functie netjes wordt afgerond op twee decimalen.
 // Tip: Google is your best friend!
 
-
-
+console.log(Math.round(averageGrade([8, 9, 4, 6, 10])*100)/100);
 
 /* Bonusopdracht: hoogste cijfer */
 
@@ -72,11 +126,32 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 
 // ---- Verwachte uitkomst: 9
 
-
 /* 3b: Omschrijven tot een herbruikbare functie */
 // Schrijf een functie genaamd highestGrade, die een array van cijfers verwacht (zoals grades) en het hoogste cijfer teruggeeft. Gebruik hiervoor jouw antwoord van 3a.
 // Zorg ervoor dat jouw functie ook werkt als we een andere array willen checken, zoals bijvoorbeeld: [6, 4, 5] of [8, 9, 4, 6, 10].
 // Log het antwoord in de terminal.
+
+//*Iedere waarde van de array langsgaan door een for loop met gradesArray.length. Dus eerst een for loop schrijven//
+
+//* conditie checken: is het cijfer hoger dan het gemiddelde?
+
+function highestGrade(gradesArray) {
+let average= 0;
+for (let i = 0; i < gradesArray.length; i++) {
+    if (gradesArray[i] > average) {
+        average = gradesArray[i];
+
+    }
+
+} return average;
+
+
+}
+console.log(highestGrade([6, 4, 5]));
+console.log(highestGrade([8, 9, 4, 6, 10]));
+
+
+
 
 // ---- Verwachte uitkomsten:
 // highestGrade(grades) geeft 9

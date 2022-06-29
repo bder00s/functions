@@ -8,9 +8,16 @@
 // getEmailDomain("n.eeken@novi-education.nl") geeft novi-education.nl
 // getEmailDomain("t.mellink@novi.nl") geeft novi.nl
 // getEmailDomain("a.wiersma@outlook.com") geeft outlook.com
-
-
-
+{
+    function getEmailDomain(emailAdres) {
+        const indexOfAap = emailAdres.indexOf("@");
+        const domain = emailAdres.substring(indexOfAap + 1);
+        return domain;
+    }
+}
+console.log(getEmailDomain("n.eeken@novi-education.nl"));
+console.log(getEmailDomain("t.mellink@novi.nl"));
+console.log(getEmailDomain("a.wiersma@outlook.com"));
 
 /* Opdracht  2 */
 // Schrijf een functie genaamd typeOfEmail, die een emailadres verwacht. De functie checkt of het emailadres een novi domein heeft (medewerker), een novi-education domein (student), of extern domein (zoals gmail of outlook)
@@ -20,6 +27,37 @@
 // typeOfEmail("novi.nlaapjesk@outlook.com") geeft geeft "Extern" <-- deze moet het ook doen!
 // typeOfEmail("a.wiersma@outlook.com") geeft "Extern"
 
+
+function typeOfEmail(emailAdress) {
+    const indexOfAap = emailAdress.indexOf("@");
+    const accountType = emailAdress.substring(indexOfAap + 1);
+
+
+    switch (accountType) {
+        case "novi-education.nl":
+            return "Student";
+            break;
+
+        case "novi.nl":
+            return "Medewerker";
+            break;
+
+        case "outlook.com":
+            return "Extern";
+            break;
+
+        default:
+            return ("Er is geen geldig e-mailadres opgegeven");
+
+
+    }
+
+}
+
+console.log(typeOfEmail("t.mellink@novi.nl"));
+console.log(typeOfEmail("novi.nlaapjesk@outlook.com"));
+console.log(typeOfEmail("n.eeken@novi-education.nl"));
+console.log(typeOfEmail("bonne-deroos@hotmail.com"));
 
 
 /* Opdracht  3 */
@@ -34,3 +72,24 @@
 // checkEmailValidity("n.eekenanovi.nl") geeft false - want geen @
 // checkEmailValidity("n.eeken@novinl.") geeft false - want de punt mag niet als laatst
 // checkEmailValidity("tessmellink@novi,nl") geeft false - want er staat een komma in
+
+function checkEmailValidity(emailAdres) {
+    const indexOfAap = emailAdres.indexOf("@novi.nl");
+    if (emailAdres.endsWith("@novi.nl")) {
+        return true;
+    } else {
+        return false;
+    }
+
+}
+
+console.log(checkEmailValidity("tessmellink@novi.nl"));
+console.log(checkEmailValidity("n.eeken@novinl."));
+
+
+
+
+
+
+
+
