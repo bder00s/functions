@@ -64,7 +64,7 @@ console.log(cumLaude([8,9, 4, 6, 10]));
 // * Hoe zorgt ik ervoor dat ik alle waardes uit de array kan langslopen, ook als de array wel 100 entries zou bevatten?
 // Log het antwoord in de terminal.
 
-// ---- Verwachte uitkomst: 6.642857142857143
+// ---Verwachte uitkomst: 6.642857142857143
 
 // * Gemiddelde berekenen: alle getallen bij elkaar optellen en vervolgens delen door hoeveel getallen het zijn
 // * verzamelen van de cijfers uit de array en dan door de array.length delen
